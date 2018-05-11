@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('backend.system.index');
+});
+
+Route::group([
+        'prefix' => 'system'
+    ], function () {
+        Route::get('/', 'Backend\Statical\UserController@getList');
+        Route::get('/index', 'Backend\Statical\UserController@getList');
+        
 });

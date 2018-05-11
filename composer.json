@@ -6,10 +6,14 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "artisaninweb/laravel-enum": "1.0.*",
+        "graham-campbell/exceptions": "^9.4",
         "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "laravelcollective/html": "~5.0"
     },
     "require-dev": {
+        "filp/whoops": "^2.1",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.7"
@@ -19,7 +23,7 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "Diboxadmin\\": "app/"
         }
     },
     "autoload-dev": {

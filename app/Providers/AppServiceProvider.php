@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Diboxadmin\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
