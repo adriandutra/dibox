@@ -74,3 +74,12 @@
 <script type="text/javascript">
   $('select:not(.skip-me)').select2();
 </script>
+
+<script src="{{ asset ('js/bootstrap-table.js')}}"></script>
+<script src="{{ asset ('js/extensions/bootstrap-table-cookie.js')}}"></script>
+<script src="{{ asset ('js/extensions/bootstrap-table-mobile.js')}}"></script>
+<script src="{{ asset ('js/extensions/bootstrap-table-toolbar.js')}}"></script>
+<script src="{{ asset ('js/extensions/tableExport.js')}}"></script>
+<script src="{{ asset ('js/extensions/bootstrap-table-export.js')}}"></script>
+<script src="{{ asset ('js/extensions/bootstrap-table-resizable.js')}}"></script>
+<script src="{{ asset ('js/extensions/colResizable-1.5.source.js')}}"></script>

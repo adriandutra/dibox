@@ -14,8 +14,25 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = 'crm_user';
+    
+    protected $primary = 'i_user';
+    
+    public $timestamps = false;
+    
     protected $fillable = [
-        'name', 'email', 'password',
+        'i_parent',
+        'user', 
+        'fullname', 
+        'email', 
+        'i_country', 
+        'phone', 
+        'password', 
+        'expiration_date', 
+        'expiration_flag', 
+        'last_update', 
+        'acitve', 
+        'trash',
     ];
 
     /**

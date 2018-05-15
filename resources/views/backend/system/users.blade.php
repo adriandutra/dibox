@@ -31,10 +31,11 @@
 	 </div>
 	</div>
 </div>
+
 		<div class="panel-body">
 			<table class="table-striped"
 					data-toggle="table"
-					data-url="/users//"
+					data-url="{{url('api/v1/users/list') }}"
 					data-show-refresh="true"
 					data-show-toggle="true"
 					data-show-columns="true"
@@ -77,6 +78,47 @@
 @endsection
 @section('custom-scripts')
 
+
+	<script>
+	var url ="/user";
+	
+	function customicon(value, row){
+		
+		html=' <a href="/accesslog/'+row.id+'"><i class="glyphicon glyphicon-calendar icon-calendar" title="Accesos"></i></a>';
+		
+		return html;
+	}
+
+	function actionicons(value, row) {
+		
+		html ='';
+		
+		display='display:none;'
+		
+		
+		
+			if(row.id!='1'){
+	
+				html+='<a href="'+url+'/'+row.id+'" title="Editar"><i class="glyphicon glyphicon-pencil icon-pencil" style="{edit_perm}"></i></a> ';
+				
+				if(row.trash=='1'){
+					display='';
+				
+					html+=' <a href="#" class="delete" data-action="restore" data-id="'+row.id+'" style="{delete_perm}"><i class="glyphicon glyphicon-repeat icon-repeat" title="Restaurar"></i></a> ';
+				
+				}else{
+					html+=' <a href="#" class="delete" data-action="delete" data-id="'+row.id+'" style="{delete_perm}"><i class="glyphicon glyphicon-trash icon-trash" title="Enviar a papelera"></i></a> ';
+				}
+					
+				 html+=' <a href="#" class="delete totalremove" data-action="totalremove" data-id="'+row.id+'" style="'+display+' {delete_perm}"><i class="glyphicon glyphicon-remove icon-repeat" title="Eliminar"></i></a> ';
+			}else{
+				html+='<a href="'+url+'/'+row.id+'" title="Ver"><i class="glyphicon glyphicon-eye-open eye-open" style="{edit_perm}"></i></a> ';
+			}
+		
+		 return html;
+	}
+	</script>
+	<script src="{{ asset ('js/table.control.js')}}"></script>
 
 @endsection
 

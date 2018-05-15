@@ -11,7 +11,7 @@
 								<svg class='glyph'>
 									<use xlink:href='#stroked-gear'></use>
 								</svg></span>Sistema</a><ul class='children collapse panel-collapse' id='s_20'><li>
-													<a  class='submodule' href="{{url('system/index')}}" id='a_2'>
+													<a  class='submodule' href="{{url('system/users')}}" id='a_2'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-male-user'></use>
 														</svg>
@@ -25,14 +25,14 @@
 															Roles & Perm
 													</a>
 													</li><li>
-													<a  class='submodule' href='mailing' id='a_5'>
+													<a  class='submodule' href="{{url('system/notify')}}" id='a_5'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-app-window'></use>
 														</svg>
 															Notificaciones
 													</a>
 													</li><li>
-													<a  class='submodule' href='ftpusers' id='a_18'>
+													<a  class='submodule' href="{{url('system/ftpuser')}}" id='a_18'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-male-user'></use>
 														</svg>
@@ -106,14 +106,14 @@
 														<svg class='glyph'>
 														<use xlink:href='#stroked-table'></use>
 														</svg>
-															Géneros
+															G&eacute;neros
 													</a>
 													</li><li>
 													<a  class='submodule' href='ordergenres' id='a_44'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-table'></use>
 														</svg>
-															Orden Géneros Home
+															Orden G&eacute;neros Home
 													</a>
 													</li><li>
 													<a  class='submodule' href='listmetadata' id='a_15'>
@@ -127,7 +127,7 @@
 														<svg class='glyph'>
 														<use xlink:href='#stroked-landscape'></use>
 														</svg>
-															Imágenes
+															Im&aacute;genes
 													</a>
 													</li><li>
 													<a  class='submodule' href='livelist' id='a_7'>
@@ -228,14 +228,14 @@
 								<svg class='glyph'>
 									<use xlink:href='#stroked-desktop'></use>
 								</svg></span>CDN</a><ul class='children collapse panel-collapse' id='s_41'><li>
-													<a  class='submodule' href='mediaservers' id='a_40'>
+													<a  class='submodule' href="{{url('cdn/mediaservers')}}" id='a_40'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-gear'></use>
 														</svg>
 															Media Servers
 													</a>
 													</li><li>
-													<a  class='submodule' href='pops' id='a_42'>
+													<a  class='submodule' href="{{url('cdn/pops')}}" id='a_42'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-app-window-with-content'></use>
 														</svg>

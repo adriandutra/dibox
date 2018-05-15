@@ -11,8 +11,17 @@ use DB;
 class UserController extends Controller
 {    
     public function getList(Request $request)
-    {        
-        return view('backend.system.index');
+    {       
+       return view('backend.system.users');
     }
     
+    public function getNotify(Request $request)
+    {
+        return view('backend.system.mailing');
+    }
+    
+    public function getFtpUser(Request $request)
+    {
+        return view('backend.system.ftpuser');
+    }
 }
