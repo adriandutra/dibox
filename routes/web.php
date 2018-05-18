@@ -11,7 +11,13 @@
 |
 */
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function () {
+    return view('auth/login');
+});
+    
+    Auth::routes();
+    
+    Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group([
     'prefix' => 'api/v1'
@@ -42,5 +48,8 @@ Route::group([
     Route::get('/pops', 'Backend\Statical\CdnController@getPops');       
 });
 
+Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'HomeController@index')->name('home');
 Route::get('/{slug?}', 'HomeController@index')->name('home');
