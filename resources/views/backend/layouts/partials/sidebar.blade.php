@@ -46,7 +46,7 @@
 								<svg class='glyph'>
 									<use xlink:href='#stroked-bag'></use>
 								</svg></span>Comercial</a><ul class='children collapse panel-collapse' id='s_21'><li>
-													<a  class='submodule' href='providers' id='a_43'>
+													<a  class='submodule' href="{{url('comercial/providers')}}" id='a_43'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-film'></use>
 														</svg>

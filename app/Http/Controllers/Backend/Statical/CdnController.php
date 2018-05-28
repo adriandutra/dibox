@@ -11,12 +11,12 @@ use DB;
 
 class CdnController extends Controller
 {
-    public function getMediaServers(Request $request)
+    public function getMediaServers()
     {
         return view('backend.cdn.mediaservers');
     }
     
-    public function getPops(Request $request)
+    public function getPops()
     {
         return view('backend.cdn.pops');
     }
