@@ -13,12 +13,12 @@ class CdnController extends Controller
 {
     public function getMediaServers()
     {
-        return view('backend.cdn.mediaservers');
+        return view('backend.cdn.mediaservers.mediaservers');
     }
     
     public function getPops()
     {
-        return view('backend.cdn.pops');
+        return view('backend.cdn.pops.pops');
     }
     
 }

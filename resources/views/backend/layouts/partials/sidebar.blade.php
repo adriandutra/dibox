@@ -25,14 +25,14 @@
 															Roles & Perm
 													</a>
 													</li><li>
-													<a  class='submodule' href="{{url('system/notify')}}" id='a_5'>
+													<a  class='submodule' href="{{url('system/notifications')}}" id='a_5'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-app-window'></use>
 														</svg>
 															Notificaciones
 													</a>
 													</li><li>
-													<a  class='submodule' href="{{url('system/ftpuser')}}" id='a_18'>
+													<a  class='submodule' href="{{url('system/ftp')}}" id='a_18'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-male-user'></use>
 														</svg>
@@ -95,7 +95,7 @@
 								<svg class='glyph'>
 									<use xlink:href='#stroked-video'></use>
 								</svg></span>Contenidos</a><ul class='children collapse panel-collapse' id='s_22'><li>
-													<a  class='submodule' href='applications' id='a_30'>
+													<a  class='submodule' href="{{url('comercial/applications')}}" id='a_30'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-laptop-computer-and-mobile'></use>
 														</svg>

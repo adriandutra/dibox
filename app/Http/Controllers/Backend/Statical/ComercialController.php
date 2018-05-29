@@ -12,31 +12,31 @@ class ComercialController extends Controller
 {
     public function getProviders()
     {
-        return view('backend.comercial.providers');
+        return view('backend.comercial.providers.providers');
     }
     
     public function getResellers()
     {
-        return view('backend.comercial.resellers');
+        return view('backend.comercial.resellers.resellers');
     }
     
     public function getServices()
     {
-        return view('backend.comercial.services');
+        return view('backend.comercial.services.services');
     }
     
     public function getPacks()
     {
-        return view('backend.comercial.packs');
+        return view('backend.comercial.packs.packs');
     }
     
     public function getProducts()
     {
-        return view('backend.comercial.products');
+        return view('backend.comercial.products.products');
     }
     
     public function getCustomers()
     {
-        return view('backend.comercial.customers');
+        return view('backend.comercial.customers.customers');
     }
 }

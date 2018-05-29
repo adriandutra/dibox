@@ -37,32 +37,81 @@ Route::group([
 });
 
 Route::group([
-        'prefix' => 'system'
+        'prefix' => 'system/users'
     ], function () {
         Route::get('/', 'Backend\Statical\UserController@getList');
-        Route::get('/users', 'Backend\Statical\UserController@getList');
-        Route::get('/notify', 'Backend\Statical\UserController@getNotify');
-        Route::get('/ftpuser', 'Backend\Statical\UserController@getFtpUser');
-        
+        Route::get('/users', 'Backend\Statical\UserController@getList'); 
 });
 
 Route::group([
-    'prefix' => 'cdn'
+    'prefix' => 'system/notifications'
+], function () {
+    Route::get('/', 'Backend\Statical\UserController@getNotify');
+    Route::get('/mailing', 'Backend\Statical\UserController@getNotify');
+    
+});
+
+Route::group([
+    'prefix' => 'system/ftp'
+], function () {
+    Route::get('/', 'Backend\Statical\UserController@getFtpUser');
+    Route::get('/ftpuser', 'Backend\Statical\UserController@getFtpUser');
+    
+});
+
+Route::group([
+    'prefix' => 'cdn/mediaservers'
 ], function () {
     Route::get('/', 'Backend\Statical\CdnController@getMediaServers');
-    Route::get('/mediaservers', 'Backend\Statical\CdnController@getMediaServers');
     Route::get('/pops', 'Backend\Statical\CdnController@getPops');       
 });
 
 Route::group([
-    'prefix' => 'comercial'
+    'prefix' => 'cdn/pops'
+], function () {
+    Route::get('/', 'Backend\Statical\CdnController@getPops');
+    Route::get('/pops', 'Backend\Statical\CdnController@getPops');
+});
+
+Route::group([
+    'prefix' => 'comercial/providers'
 ], function () {
     Route::get('/', 'Backend\Statical\ComercialController@getProviders');
     Route::get('/providers', 'Backend\Statical\ComercialController@getProviders');
+});
+
+Route::group([
+    'prefix' => 'comercial/resellers'
+], function () {
+    Route::get('/', 'Backend\Statical\ComercialController@getResellers');
     Route::get('/resellers', 'Backend\Statical\ComercialController@getResellers');
+});
+
+Route::group([
+    'prefix' => 'comercial/services'
+], function () {
+    Route::get('/', 'Backend\Statical\ComercialController@getServices');
     Route::get('/services', 'Backend\Statical\ComercialController@getServices');
+});
+
+Route::group([
+    'prefix' => 'comercial/packs'
+], function () {
+    Route::get('/', 'Backend\Statical\ComercialController@getPacks');
     Route::get('/packs', 'Backend\Statical\ComercialController@getPacks');
+});
+
+Route::group([
+    'prefix' => 'comercial/products'
+], function () {
+    Route::get('/', 'Backend\Statical\ComercialController@getProducts');
     Route::get('/products', 'Backend\Statical\ComercialController@getProducts');
+});
+
+Route::group([
+    'prefix' => 'comercial/customers'
+], function () {
+    Route::get('/', 'Backend\Statical\ComercialController@getCustomers');
     Route::get('/customers', 'Backend\Statical\ComercialController@getCustomers');
 });
 

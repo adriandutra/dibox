@@ -12,16 +12,16 @@ class UserController extends Controller
 {    
     public function getList()
     {       
-       return view('backend.system.users');
+       return view('backend.system.users.users');
     }
     
     public function getNotify()
     {
-        return view('backend.system.mailing');
+        return view('backend.system.notifications.mailing');
     }
     
     public function getFtpUser()
     {
-        return view('backend.system.ftpuser');
+        return view('backend.system.ftp.ftpuser');
     }
 }
