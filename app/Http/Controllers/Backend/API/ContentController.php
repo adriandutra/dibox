@@ -15,113 +15,58 @@ use DB;
 
 class ContentController extends Controller
 {
+   
     public function getApplications()
     {
-        return view('backend.content.applications.applications');
+        try {
+            
+            $apps  = DB::table('cms_application')
+                        ->Select(DB::raw('i_app as id
+                                         , name
+                                         , description
+                                         , url
+                                         , TO_BASE64(file) as file
+                                         , active'))
+                        ->get();
+                                         
+                                         
+            $r = new ModelResponse();
+            $r->success = true;
+            $r->message = 'Applications response';
+            $r->data = $apps;
+            return $r->doResponse();
+                                         
+        } catch(\Exception $e){
+            $r = new ApiResponse();
+            $r->success = false;
+            $r->message = $e->getMessage();
+            return $r->doResponse();
+        }
     }
     
     public function getGenres()
     {
-        return view('backend.content.genres.genres');
-    }
-    
-    public function getOrderGenres()
-    {
-        return view('backend.content.ordergenres.ordergenres');
-    }
-    
-    public function getMetadata()
-    {
-        return view('backend.content.metadata.metadata');
-    }
-    
-    public function getImages()
-    {
-        return view('backend.content.images.images');
-    }
-    
-    public function getLive()
-    {
-        return view('backend.content.live.live');
-    }
-    
-    public function getLive()
-    {
-        return view('backend.content.live.live');
-    }
-    public function getLive()
-    {
-        return view('backend.content.live.live');
-    }
-    
-    public function getLive()
-    {
-        return view('backend.content.live.live');
-    }
-    
-    public function getLive()
-    {
-        return view('backend.content.live.live');
-    }
-    
-    public function getNewsList()
-    {
-        return view('backend.content.newslist.newslist');
-    }
-    
-    public function getSeries()
-    {
-        return view('backend.content.series.series');
-    }
-    
-    public function getOutstandingList()
-    {
-        return view('backend.content.outstandinglist.outstandinglist');
-    }
-    
-    public function getCategoryList()
-    {
-        return view('backend.content.categorylist.categorylist');
-    }
-    
-    public function getCmsTexts()
-    {
-        return view('backend.content.cmstexts.cmstexts');
-    }
-    
-    public function getMediaAudios()
-    {
-        return view('backend.content.mediaadios.mediaaudios');
-    }
-    
-    public function getListAudioData()
-    {
-        return view('backend.content.listaudiodata.listaudiodata');
-    }
-    
-    public function getMusicGenres()
-    {
-        return view('backend.content.musicgenres.musicgenres');
-    }
-    
-    public function getAdvertisingList()
-    {
-        return view('backend.content.advertisinglist.advertisinglist');
-    }
-    
-    public function getListVodHls()
-    {
-        return view('backend.content.listvodhls.listvodhls');
-    }
-    
-    public function getMediaFiles()
-    {
-        return view('backend.content.mediafiles.mediafiles');
-    }
-    
-    public function getTrailers()
-    {
-        return view('backend.content.trailers.trailers');
+        try {
+            
+            $genres  = DB::table('cms_genres')
+                        ->Select(DB::raw('i_genre as id
+                                         , name
+                                         , active'))
+                        ->get();
+                                         
+                                         
+            $r = new ModelResponse();
+            $r->success = true;
+            $r->message = 'Genres response';
+            $r->data = $genres;
+            return $r->doResponse();
+                                         
+        } catch(\Exception $e){
+            $r = new ApiResponse();
+            $r->success = false;
+            $r->message = $e->getMessage();
+            return $r->doResponse();
+        }
     }
     
 }

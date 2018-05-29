@@ -95,14 +95,14 @@
 								<svg class='glyph'>
 									<use xlink:href='#stroked-video'></use>
 								</svg></span>Contenidos</a><ul class='children collapse panel-collapse' id='s_22'><li>
-													<a  class='submodule' href="{{url('comercial/applications')}}" id='a_30'>
+													<a  class='submodule' href="{{url('content/applications')}}" id='a_30'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-laptop-computer-and-mobile'></use>
 														</svg>
 															Aplicaciones
 													</a>
 													</li><li>
-													<a  class='submodule' href='genres' id='a_6'>
+													<a  class='submodule' href="{{url('content/genres')}}" id='a_6'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-table'></use>
 														</svg>

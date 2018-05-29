@@ -30,6 +30,9 @@ Route::group([
     Route::get('comercial/packs', array('uses' => 'Backend\API\ComercialController@getPacks'))->name('comercial.packs');
     Route::get('comercial/products', array('uses' => 'Backend\API\ComercialController@getProducts'))->name('comercial.products');
     Route::get('comercial/customers', array('uses' => 'Backend\API\ComercialController@getCustomers'))->name('comercial.customers');
+    Route::get('content/applications', array('uses' => 'Backend\API\ContentController@getApplications'))->name('content.applications');
+    Route::get('content/genres', array('uses' => 'Backend\API\ContentController@getGenres'))->name('content.genres');
+    Route::get('content/images', array('uses' => 'Backend\API\ContentController@getImages'))->name('content.images');
     Route::get('users/ftpuser', array('uses' => 'Backend\API\UserController@getFtpUser'))->name('users.ftpuser');
     Route::get('users/list', array('uses' => 'Backend\API\UserController@getList'))->name('users.list');
     Route::get('users/notify', array('uses' => 'Backend\API\UserController@getNotify'))->name('users.notify');
@@ -113,6 +116,132 @@ Route::group([
 ], function () {
     Route::get('/', 'Backend\Statical\ComercialController@getCustomers');
     Route::get('/customers', 'Backend\Statical\ComercialController@getCustomers');
+});
+
+Route::group([
+    'prefix' => 'content/applications'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getApplications');
+    Route::get('/applications', 'Backend\Statical\ContentController@getApplications');
+});
+
+Route::group([
+    'prefix' => 'content/genres'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getGenres');
+    Route::get('/genres', 'Backend\Statical\ContentController@getGenres');
+});
+
+Route::group([
+    'prefix' => 'content/ordergenres'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getOrderGenres');
+    Route::get('/ordergenres', 'Backend\Statical\ContentController@getOrderGenres');
+});
+
+Route::group([
+    'prefix' => 'content/metadata'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getMetadata');
+    Route::get('/metadata', 'Backend\Statical\ContentController@getMetadata');
+});
+
+Route::group([
+    'prefix' => 'content/images'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getImages');
+    Route::get('/images', 'Backend\Statical\ContentController@getImages');
+});
+
+Route::group([
+    'prefix' => 'content/live'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getLive');
+    Route::get('/live', 'Backend\Statical\ContentController@getLive');
+});
+
+Route::group([
+    'prefix' => 'content/newslist'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getNewsList');
+    Route::get('/newslist', 'Backend\Statical\ContentController@getNewsList');
+});
+
+Route::group([
+    'prefix' => 'content/series'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getSeries');
+    Route::get('/series', 'Backend\Statical\ContentController@getSeries');
+});
+
+Route::group([
+    'prefix' => 'content/outstandinglist'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@OutstandingList');
+    Route::get('/outstandinglist', 'Backend\Statical\ContentController@OutstandingList');
+});
+
+Route::group([
+    'prefix' => 'content/categorylist'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getCategoryList');
+    Route::get('/categorylist', 'Backend\Statical\ContentController@getCategoryList');
+});
+
+Route::group([
+    'prefix' => 'content/cmstexts'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getCmsTexts');
+    Route::get('/cmstexts', 'Backend\Statical\ContentController@getCmsTexts');
+});
+
+Route::group([
+    'prefix' => 'content/mediaaudios'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getMediaAudios');
+    Route::get('/mediaaudios', 'Backend\Statical\ContentController@getMediaAudios');
+});
+
+Route::group([
+    'prefix' => 'content/listaudiodata'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getListAudioData');
+    Route::get('/listaudiodata', 'Backend\Statical\ContentController@getListAudioData');
+});
+
+Route::group([
+    'prefix' => 'content/musicgenres'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getMusicGenres');
+    Route::get('/musicgenres', 'Backend\Statical\ContentController@getMusicGenres');
+});
+
+Route::group([
+    'prefix' => 'content/advertisinglist'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@etAdvertisingList');
+    Route::get('/advertisinglist', 'Backend\Statical\ContentController@getAdvertisingList');
+});
+
+Route::group([
+    'prefix' => 'content/listvodhls'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getListVodHls');
+    Route::get('/listvodhls', 'Backend\Statical\ContentController@getListVodHls');
+});
+
+Route::group([
+    'prefix' => 'content/mediafiles'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getMediaFiles');
+    Route::get('/mediafiles', 'Backend\Statical\ContentController@getMediaFiles');
+});
+
+Route::group([
+    'prefix' => 'content/trailers'
+], function () {
+    Route::get('/', 'Backend\Statical\ContentController@getTrailers');
+    Route::get('/trailers', 'Backend\Statical\ContentController@getTrailers');
 });
 
 Auth::routes();
