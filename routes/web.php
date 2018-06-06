@@ -32,7 +32,12 @@ Route::group([
     Route::get('comercial/customers', array('uses' => 'Backend\API\ComercialController@getCustomers'))->name('comercial.customers');
     Route::get('content/applications', array('uses' => 'Backend\API\ContentController@getApplications'))->name('content.applications');
     Route::get('content/genres', array('uses' => 'Backend\API\ContentController@getGenres'))->name('content.genres');
+    Route::get('content/listseries', array('uses' => 'Backend\API\ContentController@getSeries'))->name('content.listseries');
+    Route::get('content/outstandinglist', array('uses' => 'Backend\API\ContentController@getOutstandingList'))->name('content.outstandinglist');
     Route::get('content/images', array('uses' => 'Backend\API\ContentController@getImages'))->name('content.images');
+    Route::get('content/advertisinglist', array('uses' => 'Backend\API\ContentController@getAdvertisingList'))->name('content.advertisinglist');
+    Route::get('content/listvodhls', array('uses' => 'Backend\API\ContentController@getListVodHls'))->name('content.listvodhls');
+    Route::get('content/trailers', array('uses' => 'Backend\API\ContentController@getTrailers'))->name('content.trailers');
     Route::get('users/ftpuser', array('uses' => 'Backend\API\UserController@getFtpUser'))->name('users.ftpuser');
     Route::get('users/list', array('uses' => 'Backend\API\UserController@getList'))->name('users.list');
     Route::get('users/notify', array('uses' => 'Backend\API\UserController@getNotify'))->name('users.notify');
@@ -168,17 +173,17 @@ Route::group([
 });
 
 Route::group([
-    'prefix' => 'content/series'
+    'prefix' => 'content/listseries'
 ], function () {
     Route::get('/', 'Backend\Statical\ContentController@getSeries');
-    Route::get('/series', 'Backend\Statical\ContentController@getSeries');
+    Route::get('/listseries', 'Backend\Statical\ContentController@getSeries');
 });
 
 Route::group([
     'prefix' => 'content/outstandinglist'
 ], function () {
-    Route::get('/', 'Backend\Statical\ContentController@OutstandingList');
-    Route::get('/outstandinglist', 'Backend\Statical\ContentController@OutstandingList');
+    Route::get('/', 'Backend\Statical\ContentController@getOutstandingList');
+    Route::get('/outstandinglist', 'Backend\Statical\ContentController@getOutstandingList');
 });
 
 Route::group([
@@ -219,7 +224,7 @@ Route::group([
 Route::group([
     'prefix' => 'content/advertisinglist'
 ], function () {
-    Route::get('/', 'Backend\Statical\ContentController@etAdvertisingList');
+    Route::get('/', 'Backend\Statical\ContentController@getAdvertisingList');
     Route::get('/advertisinglist', 'Backend\Statical\ContentController@getAdvertisingList');
 });
 

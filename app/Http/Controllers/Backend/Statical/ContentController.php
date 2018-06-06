@@ -46,7 +46,7 @@ class ContentController extends Controller
     
     public function getSeries()
     {
-        return view('backend.content.series.series');
+        return view('backend.content.listseries.listseries');
     }
     
     public function getOutstandingList()
