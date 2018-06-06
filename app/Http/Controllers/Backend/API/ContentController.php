@@ -69,6 +69,75 @@ class ContentController extends Controller
         }
     }
     
+    public function getMetadata()
+    {
+        try {
+            
+            $metadata = DB::table('cms_activemetadata')
+                        ->Select(DB::raw('cms_activemetadata.title
+                                          ,cms_activemetadata.i_data
+                                          ,cms_activemetadata.uid
+                                          ,cms_activemetadata.title
+                                          ,cms_activemetadata.genre
+                                          ,cms_ratingmetadata.average_rating
+                                          ,cms_ratingmetadata.rating_number
+                                          ,cms_activemetadata.image
+                                          ,cms_activemetadata.trailer
+                                          ,cms_activemetadata.media
+                                          ,cms_activemetadata.last_update
+                                          ,cms_activemetadata.active
+                                          ,cms_activemetadata.syncthing
+                                          ,cms_activemetadata.trash
+                                          ,cms_activemetadata.active
+                                          ,cms_activemetadata.expiration_date'))
+                        ->leftjoin('cms_ratingmetadata','cms_activemetadata.uid','=','cms_ratingmetadata.rating_uid')
+                        ->get();
+                                             
+                                             
+            $r = new ModelResponse();
+            $r->success = true;
+            $r->message = 'Metadata response';
+            $r->data = $metadata;
+            return $r->doResponse();
+                                             
+        } catch(\Exception $e){
+            $r = new ApiResponse();
+            $r->success = false;
+            $r->message = $e->getMessage();
+            return $r->doResponse();
+        }
+    }
+    
+    public function getMediaImages()
+    {
+        try {
+            
+            $images = DB::table('cms_mediaimages')
+                            ->Select(DB::raw('cms_mediaimages.i_image as id 
+                                             , cms_mediaimages.uid as uid
+                                             , cms_metadata.title  as title                                           
+                                             , cms_mediaimages.name as name
+                                             , cms_mediaimages.type as type
+                                             , CONCAT(\'<img src="https://api.dibox.com.ar:8083/image/vodbyiimage/\',cms_mediaimages.i_image, \'/100/100/" style="max-width:100px; max-height:100px;"/>\') as file
+                                             , cms_mediaimages.active as active'))
+                            ->leftjoin('cms_metadata','cms_metadata.uid','=','cms_mediaimages.uid')
+                            ->get();
+                                         
+                                         
+            $r = new ModelResponse();
+            $r->success = true;
+            $r->message = 'Images response';
+            $r->data = $images;
+            return $r->doResponse();
+                                         
+        } catch(\Exception $e){
+            $r = new ApiResponse();
+            $r->success = false;
+            $r->message = $e->getMessage();
+            return $r->doResponse();
+        }
+    }
+    
     public function getOutstandingList()
     {
         try {
@@ -89,6 +158,33 @@ class ContentController extends Controller
             $r->data = $outstand;
             return $r->doResponse();
                                         
+        } catch(\Exception $e){
+            $r = new ApiResponse();
+            $r->success = false;
+            $r->message = $e->getMessage();
+            return $r->doResponse();
+        }
+    }
+    
+    public function getCategoryList()
+    {
+        try {
+            
+                $categories  = DB::table('cms_category')
+                                 ->Select(DB::raw('i_category as id
+                                                   , name
+                                                   , description
+                                                   , TO_BASE64(file) as file
+                                                   , active'))
+                                 ->get();
+                                         
+                                         
+            $r = new ModelResponse();
+            $r->success = true;
+            $r->message = 'Categories response';
+            $r->data = $categories;
+            return $r->doResponse();
+                                         
         } catch(\Exception $e){
             $r = new ApiResponse();
             $r->success = false;
@@ -124,6 +220,32 @@ class ContentController extends Controller
             return $r->doResponse();
         }
     }
+    
+    public function getMusicGenres()
+    {
+        try {
+            
+            $music  = DB::table('cms_music_genres')
+                            ->Select(DB::raw('i_genre as id
+                                             , name
+                                             , active'))
+                            ->get();
+                                                   
+                                                   
+           $r = new ModelResponse();
+           $r->success = true;
+           $r->message = 'Categories response';
+           $r->data = $music;
+           return $r->doResponse();
+                                                   
+        } catch(\Exception $e){
+            $r = new ApiResponse();
+            $r->success = false;
+            $r->message = $e->getMessage();
+            return $r->doResponse();
+        }
+    }
+    
     
     public function getAdvertisingList()
     {

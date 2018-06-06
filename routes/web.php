@@ -31,8 +31,12 @@ Route::group([
     Route::get('comercial/products', array('uses' => 'Backend\API\ComercialController@getProducts'))->name('comercial.products');
     Route::get('comercial/customers', array('uses' => 'Backend\API\ComercialController@getCustomers'))->name('comercial.customers');
     Route::get('content/applications', array('uses' => 'Backend\API\ContentController@getApplications'))->name('content.applications');
+    Route::get('content/categorylist', array('uses' => 'Backend\API\ContentController@getCategoryList'))->name('content.categorylist');
+    Route::get('content/mediaimages', array('uses' => 'Backend\API\ContentController@getMediaImages'))->name('content.mediaimages');
+    Route::get('content/musicgenres', array('uses' => 'Backend\API\ContentController@getMusicGenres'))->name('content.musicgenres');
     Route::get('content/genres', array('uses' => 'Backend\API\ContentController@getGenres'))->name('content.genres');
     Route::get('content/listseries', array('uses' => 'Backend\API\ContentController@getSeries'))->name('content.listseries');
+    Route::get('content/metadata', array('uses' => 'Backend\API\ContentController@getMetadata'))->name('content.metadata');
     Route::get('content/outstandinglist', array('uses' => 'Backend\API\ContentController@getOutstandingList'))->name('content.outstandinglist');
     Route::get('content/images', array('uses' => 'Backend\API\ContentController@getImages'))->name('content.images');
     Route::get('content/advertisinglist', array('uses' => 'Backend\API\ContentController@getAdvertisingList'))->name('content.advertisinglist');
@@ -152,10 +156,10 @@ Route::group([
 });
 
 Route::group([
-    'prefix' => 'content/images'
+    'prefix' => 'content/mediaimages'
 ], function () {
-    Route::get('/', 'Backend\Statical\ContentController@getImages');
-    Route::get('/images', 'Backend\Statical\ContentController@getImages');
+    Route::get('/', 'Backend\Statical\ContentController@getMediaImages');
+    Route::get('/mediaimages', 'Backend\Statical\ContentController@getMediaImages');
 });
 
 Route::group([

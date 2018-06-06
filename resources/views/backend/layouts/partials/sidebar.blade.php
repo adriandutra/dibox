@@ -53,28 +53,28 @@
 															Proveedor Contenidos
 													</a>
 													</li><li>
-													<a  class='submodule' href='resellers' id='a_8'>
+													<a  class='submodule' href="{{url('comercial/resellers')}}" id='a_8'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-chevron-right'></use>
 														</svg>
 															Operadores
 													</a>
 													</li><li>
-													<a  class='submodule' href='services' id='a_27'>
+													<a  class='submodule' href="{{url('comercial/services')}}" id='a_27'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-chevron-right'></use>
 														</svg>
 															Servicios
 													</a>
 													</li><li>
-													<a  class='submodule' href='packages' id='a_26'>
+													<a  class='submodule' href="{{url('comercial/packages')}}" id='a_26'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-chevron-right'></use>
 														</svg>
 															Packs
 													</a>
 													</li><li>
-													<a  class='submodule' href='products' id='a_14'>
+													<a  class='submodule' href="{{url('comercial/products')}}" id='a_14'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-chevron-right'></use>
 														</svg>
@@ -109,112 +109,112 @@
 															G&eacute;neros
 													</a>
 													</li><li>
-													<a  class='submodule' href='ordergenres' id='a_44'>
+													<a  class='submodule' href="{{url('content/ordengenres')}}" id='a_44'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-table'></use>
 														</svg>
 															Orden G&eacute;neros Home
 													</a>
 													</li><li>
-													<a  class='submodule' href='listmetadata' id='a_15'>
+													<a  class='submodule' href="{{url('content/metadata')}}" id='a_15'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-tag'></use>
 														</svg>
 															Metadata
 													</a>
 													</li><li>
-													<a  class='submodule' href='mediaimages' id='a_24'>
+													<a  class='submodule' href="{{url('content/mediaimages')}}" id='a_24'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-landscape'></use>
 														</svg>
 															Im&aacute;genes
 													</a>
 													</li><li>
-													<a  class='submodule' href='livelist' id='a_7'>
+													<a  class='submodule' href="{{url('content/livelist')}}" id='a_7'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-camcorder'></use>
 														</svg>
 															Live Streaming
 													</a>
 													</li><li>
-													<a  class='submodule' href='newslist' id='a_32'>
+													<a  class='submodule' href="{{url('content/newslist')}}" id='a_32'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-map'></use>
 														</svg>
 															Noticias
 													</a>
 													</li><li>
-													<a  class='submodule' href='listseries' id='a_39'>
+													<a  class='submodule' href="{{url('content/listseries')}}" id='a_39'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-film'></use>
 														</svg>
 															Series
 													</a>
 													</li><li>
-													<a  class='submodule' href='outstandinglist' id='a_38'>
+													<a  class='submodule' href="{{url('content/outstandinglist')}}" id='a_38'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-table'></use>
 														</svg>
 															Novedades
 													</a>
 													</li><li>
-													<a  class='submodule' href='categorylist' id='a_37'>
+													<a  class='submodule' href="{{url('content/categorylist')}}" id='a_37'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-table'></use>
 														</svg>
 															Categorias
 													</a>
 													</li><li>
-													<a  class='submodule' href='cmstexts' id='a_36'>
+													<a  class='submodule' href="{{url('content/cmstexts')}}" id='a_36'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-table'></use>
 														</svg>
 															Texto
 													</a>
 													</li><li>
-													<a  class='submodule' href='mediaaudios' id='a_35'>
+													<a  class='submodule' href="{{url('content/mediaaudios')}}" id='a_35'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-music'></use>
 														</svg>
 															Music Files
 													</a>
 													</li><li>
-													<a  class='submodule' href='listaudiodata' id='a_34'>
+													<a  class='submodule' href="{{url('content/listaudiodata')}}" id='a_34'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-music'></use>
 														</svg>
 															Music MetaData
 													</a>
 													</li><li>
-													<a  class='submodule' href='musicgenres' id='a_33'>
+													<a  class='submodule' href="{{url('content/musicgenres')}}" id='a_33'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-table'></use>
 														</svg>
 															Generos Musicales
 													</a>
 													</li><li>
-													<a  class='submodule' href='advertisinglist' id='a_31'>
+													<a  class='submodule' href="{{url('content/advertisinglist')}}" id='a_31'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-notepad'></use>
 														</svg>
 															Publicidad
 													</a>
 													</li><li>
-													<a  class='submodule' href='listvodhls' id='a_23'>
+													<a  class='submodule' href="{{url('content/listvodhls')}}" id='a_23'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-film'></use>
 														</svg>
 															VOD Hls
 													</a>
 													</li><li>
-													<a  class='submodule' href='mediafiles' id='a_19'>
+													<a  class='submodule' href="{{url('content/mediafiles')}}" id='a_19'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-film'></use>
 														</svg>
 															VOD Files
 													</a>
 													</li><li>
-													<a  class='submodule' href='trailers' id='a_25'>
+													<a  class='submodule' href="{{url('content/trailers')}}" id='a_25'>
 														<svg class='glyph'>
 														<use xlink:href='#stroked-film'></use>
 														</svg>

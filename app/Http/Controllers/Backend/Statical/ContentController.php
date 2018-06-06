@@ -29,9 +29,9 @@ class ContentController extends Controller
         return view('backend.content.metadata.metadata');
     }
     
-    public function getImages()
+    public function getMediaImages()
     {
-        return view('backend.content.images.images');
+        return view('backend.content.mediaimages.mediaimages');
     }
     
     public function getLive()
